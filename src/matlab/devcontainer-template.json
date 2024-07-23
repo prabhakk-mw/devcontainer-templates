@@ -1,0 +1,45 @@
+{
+    "id": "matlab",
+    "version": "0.0.1",
+    "name": "MATLAB",
+    "description": "MATLAB as available on DockerHub",
+    "documentationURL": "https://github.com/mathworks/devcontainers-templates/tree/main/src/matlab",
+    "licenseURL": "https://github.com/mathworks/devcontainers-templates/blob/main/LICENSE",
+    "options": {
+        "imageVariant": {
+            "type": "string",
+            "description": "Choose between MATLAB or MATLAB Deep Learning",
+            "proposals": [
+                "matlab",
+                "matlab-deep-learning"
+            ],
+            "default": "matlab"
+        },
+        "MATLABVersion": {
+            "type": "string",
+            "description": "Select the Version of MATLAB.",
+            "proposals": [
+                "R2024a",
+                "R2023b",
+                "R2023a",
+                "R2022b",
+                "R2022a"
+            ],
+            "default": "R2024a"
+        },
+        "access": {
+            "type": "string",
+            "description": "Select container access mode.",
+            "proposals": [
+                "vnc",
+                "browser",
+                "shell",
+                ""
+            ],
+            "default": ""
+        }
+    },
+    "platforms": [
+        "Any"
+    ]
+}
