@@ -1,10 +1,13 @@
 name: "Release Dev Container Templates & Generate Documentation"
 on:
   workflow_dispatch:
-permissions:
-    packages: write
+
 jobs:
   deploy:
+    permissions:
+      packages: write
+      pull-requests: write
+
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
