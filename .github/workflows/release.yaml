@@ -3,9 +3,9 @@ on:
   workflow_dispatch:
 
 jobs:
+  permissions:
+    packages: write
   deploy:
-    permissions:
-      packages: write
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
